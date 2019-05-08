@@ -1,0 +1,5 @@
+INSERT INTO `dede_search_keywords` VALUES('12','挖掘机','挖掘机 挖掘机','1','7','1510556323','0','0');
+INSERT INTO `dede_search_keywords` VALUES('13','微型挖掘机','微型挖掘机 微型 挖掘机','1','3','1510560994','0','0');
+INSERT INTO `dede_search_keywords` VALUES('14','安防设备','安防设备 安防 设备','1','0','1510973673','0','0');
+INSERT INTO `dede_search_keywords` VALUES('16','车载仪表','车载仪表 仪表 车载','1','0','1511582243','0','0');
+INSERT INTO `dede_search_keywords` VALUES('17','产品','产品','2','19','1512958822','0','0');

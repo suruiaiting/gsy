@@ -1,0 +1,1 @@
+<div class="biaoti"> [field:typename/] <span>[field:typenameen/] </span> </div>

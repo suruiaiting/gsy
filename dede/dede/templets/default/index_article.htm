@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="email=no" name="format-detection">
+<link href="/skin/css/pintuer.css" rel="stylesheet"/>
+<script src="/skin/js/jquery.js"></script>
+<script src="/skin/js/pintuer.js"></script>
+<script src="/skin/js/respond.min.js"></script>
+<link href="/skin/css/style.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<div class="layout bg-gray"> <img src="/skin/images/about.jpg" alt="{dede:field.title/}"/> </div>
+<!--end banner-->
+<div class="layout margin-big-bottom">
+  <div class="container">
+    <ul class="bread">
+      <li>{dede:field name='position'/}</li>
+    </ul>
+  </div>
+</div>
+<div class="layout padding-big-top padding-big-bottom">
+  <div class="container">
+    <h1 class="padding-big-bottom"><a href='{dede:field name='typeurl'/}'>{dede:field name='typename'/}</a></h1>
+    <p> {dede:field.content/} </p>
+    <div class="clearfix"></div>
+  </div>
+</div>
+<!--end about--> 
+{dede:include filename="footer.htm"/}
+</body>
+</html>

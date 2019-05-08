@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta name="author" content="order by dede58.com" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="email=no" name="format-detection">
+<link href="/skin/css/pintuer.css" rel="stylesheet"/>
+<script src="/skin/js/jquery.js"></script>
+<script src="/skin/js/pintuer.js"></script>
+<script src="/skin/js/respond.min.js"></script>
+<link href="/skin/css/style.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<div class="banner" data-pointer="1" data-interval="5" data-item="1" data-small="1" data-middle="1" data-big="1" data-style="border-main">
+  <div class="carousel"> {dede:arclist typeid='19' row='3' titlelen='50' orderby='pubdate'}
+    <div class="item"><a><img src="[field:picname/]" alt="[field:title/]" ></a></div>
+    {/dede:arclist} </div>
+</div>
+<!--end banner-->
+
+<div class="layout prolist padding-big-top padding-big-bottom">
+  <div class="container padding-big-top padding-big-bottom">
+    <div class="xl12 xs12 xm3 xb3 typename">{dede:type typeid='3'}  
+      [field:typename/]{/dede:type} </div>
+    <div class="hidden-l hidden-s xm9 xb9 typelist"> {dede:channel type='son' typeid='3'} <a href="[field:typeurl/]"> [field:typename/] </a>{/dede:channel} </div>
+    <div class="clearfix"></div>
+  </div>
+</div>
+<div class="layout padding-big-top padding-big-bottom pro">
+  <div class="container padding-big-bottom">
+    <div class="container padding-big-top padding-big-bottom"> {dede:arclist typeid='3' row='8' titlelen='50' orderby='pubdate'}
+      <div class="xl6 xs6 xm3 xb3">
+        <div class="proitem"> <a href="[field:arcurl/]"> <img src="[field:picname/]" alt="[field:title/]" class="fadein">
+          <h3 class="protext">[field:title/]</h3>
+          </a> </div>
+      </div>
+      {/dede:arclist}
+      <div class="clearfix"></div>
+      <div class="padding-big-top padding-big-bottom text-center">{dede:type typeid='3'} <a class="button more-btn2" href="[field:typelink/]">READ MORE → </a>{/dede:type} </div>
+    </div>
+  </div>
+</div>
+<!--end service-->
+
+
+</div>
+<div class="layout about-bg">
+  <div class="container padding-big-top padding-big-bottom"> {dede:type typeid='1'}
+    <div class="hidden-l hidden-s xm4 xb4 newsitem padding-big-top"> <img src="[field:typeimg/]" style="width:100%"/> </div>
+    {/dede:type}
+    <div class="xl12 xs12 xm8 xb8 about-box"> {dede:type typeid='1'}
+      <h1 class="padding-bottom text-center s1">[field:typename/]</h1>
+      <h2 class="padding-big-bottom text-center s1"><span>——————  [field:typenameen/]  ——————</span></h2>
+      {/dede:type}
+      <p class="padding-big-top padding-big-bottom text-left">&nbsp; {dede:sql sql='Select content from dede_arctype where id=1'} 
+        
+        [field:content  function='cn_substr(html2text(@me),800)'/]...
+        
+        {/dede:sql}{dede:type typeid='1'} <a class="margin-big-bottom" href="[field:typelink/]"> [MORE + ]</a>{/dede:type} </p>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</div>
+<!--end about-->
+
+<div class="layout case padding-big-top padding-big-bottom">
+  <div class="container padding-big-top padding-big-bottom"> {dede:type typeid='9'}
+    <div class="biaoti"> [field:typename/] <span>[field:typenameen/]</span> </div>
+    {/dede:type}
+    <div class="padding-big-bottom caselist"> {dede:arclist typeid='9' row='4' titlelen='50' orderby='pubdate'}
+      <div class="xl6 xs6 xm3 xb3 casebox">
+        <div class="caseitem"> <a href="[field:arcurl/]"> <img src="[field:picname/]" alt="[field:title/]" >
+          <h3>[field:title/]</h3>
+          </a> </div>
+      </div>
+      {/dede:arclist} </div>
+    <div class="clearfix"></div>
+    <div class="padding-big-top padding-big-bottom text-center">{dede:type typeid='9'} <a class="button more-btn" href="[field:typelink/]">READ MORE → </a>{/dede:type} </div>
+  </div>
+</div>
+</div>
+<!--end 成功案例-->
+
+</div>
+<!--end 广告-->
+<div class="layout padding-big-top padding-big-bottom">
+  <div class="container padding-big-top padding-big-bottom"> {dede:type typeid='2'}
+    <div class="biaoti"> [field:typename/] <span>[field:typenameen/] </span> </div>
+    {/dede:type}
+    <div class="container padding-big">
+      <div class="newsitem">
+        <ul>
+          {dede:arclist typeid='2' row='6' titlelen='50' orderby='pubdate'}
+          <li class="xl12 xs12 xm6 xb6 padding-big news-item2"> <a href="[field:arcurl/]" title="[field:title/]">
+            <div class="news-tit ">
+              <div class="float-left news-span1">
+                <div class="news-time">
+                  <div class="news-time-date"> <span>[field:pubdate function="MyDate('m',@me)"/]</span>/<span>[field:pubdate function="MyDate('d',@me)"/]</span> </div>
+                  <div class="news-time-year">[field:pubdate function="MyDate('Y',@me)"/]</div>
+                </div>
+              </div>
+              <div class="float-left news-span2">
+                <div class="news-action ">
+                  <p class=" news-title ">[field:title/]</p>
+                  <p class="news-desc ">[field:description function="cn_substr(@me,80)"/]...</p>
+                </div>
+              </div>
+            </div>
+            </a> </li>
+          {/dede:arclist}
+        </ul>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>
+<!--end 新闻推荐--> 
+{dede:include filename="footer.htm"/}
+</body>
+</html>

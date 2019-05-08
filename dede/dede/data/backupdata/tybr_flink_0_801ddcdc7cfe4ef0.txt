@@ -1,0 +1,1 @@
+INSERT INTO `tybr_flink` VALUES('10','1','http://www.tooyue.cn','途约模板网','','','','1470994931','1','2');

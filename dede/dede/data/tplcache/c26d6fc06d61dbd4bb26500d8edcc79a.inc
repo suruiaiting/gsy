@@ -1,0 +1,1 @@
+<div class="hidden-l hidden-s xm4 xb4 newsitem padding-big-top"> <img src="[field:typeimg/]" style="width:100%"/> </div>

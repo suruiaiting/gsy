@@ -1,0 +1,1 @@
+<div class="item"><a><img src="[field:picname/]" alt="[field:title/]" ></a></div>

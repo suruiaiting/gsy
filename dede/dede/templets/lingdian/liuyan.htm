@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+ <title>{dede:field.seotitle /}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+    <link rel="stylesheet" type="text/css" href="/skin/css/style.css">		
+	<link rel="stylesheet" href="/skin/css/main.css">
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" href="/newtemplete/public/font/ie7/ie7.css">
+	<![endif]-->
+
+<body>
+ {dede:include filename="head.htm"/}
+    <div class="wrap1 clearfix">
+    	<div class="main clearfix">
+    		<div class="left">
+    			<div class="categories">
+                    <p class="cateTx"></p>
+                    <div class="list">
+                        <ul>
+						   {dede:channel type='son' noself='yes' typeid='2'}
+<li><a href="[field:typelink/]" title="[field:typename/]">[field:typename/]</a></li>
+ {/dede:channel}
+
+</ul>
+
+
+                    </div>
+                </div>
+                <div class="lianxi">
+                	<div class="title_box">联系我们/<span>contact</span></div>
+                	<div class="lianxi_list">
+                    	<ul>
+    <li><label>联系人：</label>{dede:global.lianxiren/}</li>
+    <li><label>手机：</label>{dede:global.dianhua/}  </li>
+    <li><label>地址：</label>{dede:global.dizhi/}</li>
+</ul>
+
+                	</div>
+            	</div>
+			</div>
+       		<div class="right">
+            	<div class="nav">
+           			{dede:type}	<p class="Product-bg">[field:typename/]</p>{/dede:type}
+					<p class="icon png">当前位置 : {dede:field name='position'/}</p>
+				</div>
+                <div class="clear"></div>
+                <div class="aboutus">
+					
+<div class="content">
+<form action="/plus/diy.php" enctype="multipart/form-data" method="post">
+<input type="hidden" name="action" value="post" />
+<input type="hidden" name="diyid" value="1" />
+<input type="hidden" name="do" value="2" />
+<table style="width:97%;" cellpadding="0" cellspacing="1">
+<tr>
+  <td align="right" valign="top">您的称呼：</td>
+  <td><input type='text' name='name' id='name' style='width:250px;height: 25px;'  class='intxt' value='' />
+</td>
+</tr>
+<tr>
+  <td align="right" valign="top">联系方式：</td>
+  <td><input type='text' name='phone' id='phone' style='width:250px;height: 25px;'  class='intxt' value='' />
+</td>
+</tr>
+<tr>
+  <td align="right" valign="top">咨询标题：</td>
+  <td><input type='text' name='biaoti' id='biaoti' style='width:250px;height: 25px;'  class='intxt' value='' />
+</td>
+</tr>
+<tr>
+  <td align="right" valign="top">咨询产品：</td>
+  <td><select name='chanpin' style='width:150px;height: 25px;'><option value='螺杆压缩机'>螺杆压缩机</option>
+<option value='谷轮压缩机'>谷轮压缩机</option>
+<option value='吊顶冷风机'>吊顶冷风机</option>
+<option value='plc制冷控制柜'>plc制冷控制柜</option>
+<option value='聚氨酯组合冷库'>聚氨酯组合冷库</option>
+<option value='全封闭压缩机组'>全封闭压缩机组</option>
+</select>
+</td>
+</tr>
+<tr>
+  <td align="right" valign="top">咨询内容：</td>
+  <td><textarea name='neirong' id='neirong' style='width:90%;height:80px'></textarea>
+</td>
+</tr>
+<input type="hidden" name="dede_fields" value="name,text;phone,text;biaoti,text;chanpin,select;neirong,multitext" />
+<input type="hidden" name="dede_fieldshash" value="495f470dc5e44be0d167d20adb5e38a1" /></table>
+<div align='center' style='height:30px;padding-top:10px;'>
+<input type="submit" name="submit" value="提 交" class='coolbg' />
+&nbsp;
+<input type="reset" name="reset" value="重 置" class='coolbg' />
+</div>
+</form>
+
+</div>
+
+				</div>
+                
+               
+               
+               
+                
+                
+            </div>
+         </div>
+		
+    </div>
+
+  {dede:include filename="footer.htm"/}
+    
+
+
+</body></html>

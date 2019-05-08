@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:global.cfg_keywords/}">
+<meta name="description" content="{dede:global.cfg_description/}">
+<link rel="stylesheet" type="text/css" href="/skin/css/style.css">		
+<link rel="stylesheet" href="/skin/css/main.css">
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" href="/newtemplete/public/font/ie7/ie7.css">
+	<![endif]-->
+<script type="text/javascript" src="/skin/js/msclass.js" async="" charset="utf-8"></script>
+<script type="text/javascript" src="/skin/js/sss.js" async="" charset="utf-8"></script>
+</head>
+<body>
+{dede:include filename="head.htm"/}
+
+    <div class="wrap clearfix">
+    	<div class="imain clearfix">
+    		<div class="news">
+                        <div class="title_box clearfix"></div>
+                        <div class="news_list">
+                        	<ul id="newsId">
+            {dede:arclist row='8' typeid='3'}
+			<li>
+                <span>[2016-05-17]</span><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a>
+            </li>
+           {/dede:arclist}
+</ul>
+
+                        </div>
+                        <div class="clear"></div>
+                        <a href="/a/news" class="morebtn">更多</a>
+			</div>
+    		<div class="about">
+            		<div class="aboutTx"> </div>
+                    <div class="c_company_2">企业简介</div>
+                    <div class="info">
+                       
+                        <div class="content">
+                        	<!--p><img src="/newtemplete/Default335/images/aboutimg.jpg"/></p-->
+                            
+        {dede:sql sql='Select content from tybr_arctype where id=1'} 
+            [field:content  function='cn_substr(html2text(@me),580)'/]...
+            {/dede:sql}......		
+
+
+
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <a href="/a/about" class="morebtn">更多</a>
+			</div>
+    		<div class="leftcategories">
+                    <div class="title_box"></div>
+                    <div class="list">
+                    	<ul>
+
+   {dede:channel type='son' noself='yes' typeid='2' row='5'}
+
+    <li><a href="[field:typelink/]">[field:typename/]</a></li>
+ {/dede:channel}
+
+</ul>
+
+
+                    </div>
+                    <div class="clear"></div>
+                    <a href="/a/cp" class="morebtn">更多</a>
+			</div>
+		</div>
+        <div class="newproducts clearfix">
+                    <div class="title_box"> 产品中心</div>
+                    	<div class="pn">
+                        	<div class="leftproc" id="LeftButton2"></div>
+                        	<div class="rightproc" id="RightButton2"></div>
+                        </div>
+                    	<div class="list" id="list" fixnum="1" style="overflow: hidden; width: 1000px; height: 180px; position: relative;">
+                    		<ul id="newproducts" style="line-height: 1.15; display: inline-block; list-style: none; width: 3672px; height: 180px;">
+			 {dede:arclist row='16' typeid='2'}
+			<li style="list-style: none; margin-left: 0px; margin-right: 5px; border-left-width: 0px; border-right-width: 0px; float: left; display: inline;">
+				<div class="pimg"><a href="[field:arcurl/]" title="[field:title/]"><img class="img" alt="[field:title/]" src="[field:litpic/]"></a></div>
+                <div class="rsp"></div>
+				<p class="title"><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></p>
+			</li>
+			
+ {/dede:arclist}
+</ul>
+
+
+                    	</div>
+		</div>
+		
+    </div>
+    <div class="friendlylink_bg clearfix">		
+    <div class="friendlylink clearfix">			
+        	友情链接：	{dede:flink row='24' type='text' titlelen="24"}
+[field:link /]
+{/dede:flink}
+ 
+
+		</div>
+    </div>
+{dede:include filename="footer.htm"/}
+    
+
+
+
+
+</body></html>

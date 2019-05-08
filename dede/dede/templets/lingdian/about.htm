@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+ <title>{dede:field.seotitle /}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+    <link rel="stylesheet" type="text/css" href="/skin/css/style.css">		
+	<link rel="stylesheet" href="/skin/css/main.css">
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" href="/newtemplete/public/font/ie7/ie7.css">
+	<![endif]-->
+
+<body>
+ {dede:include filename="head.htm"/}
+    <div class="wrap1 clearfix">
+    	<div class="main clearfix">
+    		<div class="left">
+    			<div class="categories">
+                    <p class="cateTx"></p>
+                    <div class="list">
+                        <ul>
+						   {dede:channel type='son' noself='yes' typeid='2'}
+<li><a href="[field:typelink/]" title="[field:typename/]">[field:typename/]</a></li>
+ {/dede:channel}
+
+</ul>
+
+
+                    </div>
+                </div>
+                <div class="lianxi">
+                	<div class="title_box">联系我们/<span>contact</span></div>
+                	<div class="lianxi_list">
+                    	<ul>
+    <li><label>联系人：</label>{dede:global.lianxiren/}</li>
+    <li><label>手机：</label>{dede:global.dianhua/}  </li>
+    <li><label>地址：</label>{dede:global.dizhi/}</li>
+</ul>
+
+                	</div>
+            	</div>
+			</div>
+       		<div class="right">
+            	<div class="nav">
+           		{dede:type}	<p class="Product-bg">[field:typename/]</p>{/dede:type}
+					<p class="icon png">当前位置 : {dede:field name='position'/}</p>
+				</div>
+                <div class="clear"></div>
+                <div class="aboutus">
+					
+<div class="content">
+  {dede:field.content/}
+</div>
+
+				</div>
+                
+               
+               
+               
+                
+                
+            </div>
+         </div>
+		
+    </div>
+
+  {dede:include filename="footer.htm"/}
+    
+
+
+</body></html>

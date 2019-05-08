@@ -1,0 +1,1 @@
+<a class="button more-btn" href="[field:typelink/]">READ MORE → </a>

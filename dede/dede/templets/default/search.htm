@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>搜索页_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="email=no" name="format-detection">
+<link href="/skin/css/pintuer.css" rel="stylesheet"/>
+<script src="/skin/js/jquery.js"></script>
+<script src="/skin/js/pintuer.js"></script>
+<script src="/skin/js/respond.min.js"></script>
+<link href="/skin/css/style.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+{dede:include filename="head.htm"/} 
+<!--end header-->
+<div class="layout bg-gray"> <img src="/skin/images/about.jpg" alt="{dede:field.title/}"/> </div>
+<!--end banner-->
+<div class="layout bg-gray margin-big-bottom">
+  <div class="container">
+    <ul class="bread">
+      <li>搜索页</li>
+    </ul>
+  </div>
+</div>
+<div class="layout padding-big-top padding-big-bottom">
+  <div class="container padding-big-bottom">
+    <h1 class="text-center">搜索页</h1>
+    <div class="container padding-big">
+      <div class="newsitem padding-big-top">
+        <ul>
+          {dede:list pagesize ='15'}
+          <li class="clearfix"> <a href="[field:arcurl/]" title="[field:title/]">
+            <div class="news-date">
+              <div class="news-date1">[field:pubdate function="MyDate('d',@me)"/]</div>
+              <div class="news-date2">[field:pubdate function="MyDate('Y-m',@me)"/]</div>
+            </div>
+            <div class="news-bodys">
+              <h3>[field:title/]</h3>
+              <p>​[field:description function="cn_substr(@me,200)"/]...</p>
+            </div>
+            </a> </li>
+          {/dede:list}
+        </ul>
+      </div>
+      <div class="pagelist padding-big">
+        <ul class="layout pagination border-main text-center">
+          {dede:pagelist listitem="index,end,pre,next,pageno" listsize="1"/}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!--end 新闻推荐--> 
+{dede:include filename="footer.htm"/}
+</body>
+</html>

@@ -1,0 +1,50 @@
+<div class="wrap-header">
+  <div class="layout bg-black wrap-top">
+    <div class="container height-big"> <span class="float-right">      <!--<a href="#" class="text-red">中文站</a>  <span class="text-little"> | </span><a href="#" class="">English</a>-->   </span> <span class="hidden-l">{dede:global.cfg_mc/}</span> </div>
+  </div>
+  <div class="container">
+    <div class="line">
+      <div class="xl12 xs12 xm6 xb6 padding-big-top padding-big-bottom">
+        <button class="button icon-navicon float-right" data-target="#navbar1"></button>
+        <a href="/"><img src="/skin/images/logo.png" style="width:247px;height:60px;" alt="{dede:global.cfg_webname/}"/></a> </div>
+      <div class="text-left padding-big-top hidden-l hidden-s xm6 xb6">
+        <div class="tel"> <span class="icon-envelope"></span> 公司邮箱<strong>{dede:global.cfg_yx/}</strong>      <span class="icon-phone-square"></span> 客服热线<strong>{dede:global.cfg_dh/}</strong> </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--end header-->
+<div class="bg-nav">
+  <div class="container navbar nav-big bg-inverse radius">
+    <div class="navbar-body nav-navicon" id="navbar1">
+      <ul class="nav nav-menu nav-inline nav-pills">
+        <li {dede:field name=typeid runphp="yes"}(@me=="")? @me=" class='active' ":@me="";{/dede:field}><a href="/" class="topa"> 网站首页</a></li>
+        {dede:channelartlist typeid='top' currentstyle='active' row='7'}
+        <li class='{dede:field.currentstyle/}'><a href="{dede:field name='typeurl'/}" class="topa">{dede:field name='typename'/}</a>
+          <ul {dede:field name=typeid runphp="yes"}
+global $dsql;
+$sql = "SELECT id From `#@__arctype` WHERE reid='@me' And ishidden<>1 order by sortrank asc limit 0, 100 ";
+$row = $dsql->
+            GetOne($sql);
+            @me=is_array($row)?'class="drop-menu"':'style="display:none"';
+            {/dede:field}
+            >
+            {dede:channel type='son' noself='yes'}
+            <li><a href="[field:typeurl/]">[field:typename/]</a></li>
+            {/dede:channel}
+          </ul>
+        </li>
+        {/dede:channelartlist}
+      </ul>
+      <div class="navbar-form navbar-left margin-top text-right">
+        <form  name="formsearch" action="{dede:global.cfg_cmsurl/}/plus/search.php">
+          <input type="hidden" name="kwtype" value="0" />
+          <input type="text" class="input input-auto" name="q" size="21" placeholder="关键词" />
+          <span class="addbtn">
+          <button type="submit" class="button ss-btn">搜索</button>
+          </span>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

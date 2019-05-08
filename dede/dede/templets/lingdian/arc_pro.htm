@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field.keywords/}" />
+<meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+<link rel="stylesheet" type="text/css" href="/skin/css/style.css">		
+<link rel="stylesheet" href="/skin/css/main.css">
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" href="/newtemplete/public/font/ie7/ie7.css">
+	<![endif]-->
+
+<body>
+ {dede:include filename="head.htm"/}
+    <div class="wrap1 clearfix">
+    	<div class="main clearfix">
+    		<div class="left">
+    			<div class="categories">
+                    <p class="cateTx"></p>
+                    <div class="list">
+                        <ul>
+						   {dede:channel type='son' noself='yes' typeid='2'}
+<li><a href="[field:typelink/]" title="[field:typename/]">[field:typename/]</a></li>
+ {/dede:channel}
+
+</ul>
+
+
+                    </div>
+                </div>
+                <div class="lianxi">
+                	<div class="title_box">联系我们/<span>contact</span></div>
+                	<div class="lianxi_list">
+                    	<ul>
+    <li><label>联系人：</label>{dede:global.lianxiren/}</li>
+    <li><label>手机：</label>{dede:global.dianhua/}  </li>
+    <li><label>地址：</label>{dede:global.dizhi/}</li>
+</ul>
+
+                	</div>
+            	</div>
+			</div>
+       		<div class="right">
+            	<div class="nav">
+           		{dede:type}	<p class="Product-bg">[field:typename/]</p>{/dede:type}
+					<p class="icon png">当前位置 :{dede:field name='position'/}</p>
+				</div>
+                <div class="clear"></div>
+                <div class="productdetail-bk">
+                            <div class="productdetail">
+                                <div class="pimg" id="pimg">
+    <div class="bigthumb">
+        <ul>
+            <li>
+                <a href="javascript:void(0);" title="{dede:field.title/}">
+                        <img alt="{dede:field.title/}" src="{dede:field.litpic /}">
+
+                </a>
+            </li>
+        </ul>
+    </div>
+   
+</div>
+<div class="productinfo">
+    <h1 class="title">{dede:field.title/}</h1>
+    <div class="property">
+        <ul>
+            <li>
+                        <label>价格：</label><span class="price">
+面议
+                        </span>
+
+            </li>
+            <li><label>点击数：</label> <script src="{dede:field name='phpurl'/}/count.php?view=yes&aid={dede:field name='id'/}&mid={dede:field name='mid'/}" type='text/javascript' language="javascript"></script>次</li>
+            <li>
+                <label>供应数：</label>
+现货
+            </li>
+           
+            <li class="clearfix"><label>关键字：</label>{dede:field.keywords/}</li>
+            <li><label>联系人：</label>{dede:global.lianxiren/} </li>
+			 <li><label>咨询电话：</label>{dede:global.dianhua/} </li>
+            <li><label>公司地址：</label>{dede:global.dizhi/} </li>
+           
+          
+        </ul>
+    </div>
+</div>
+<div class="clear"></div>
+<div class="tablist">
+    <ul>
+        <li><a href="javascript:void(0);">详细内容</a></li>
+    </ul>
+</div>
+<div class="content">
+  {dede:field.body/}
+</div>
+<div>
+    <!--购物车-start-->
+    <input type="hidden" value="0" id="h-product-price">
+    <input type="hidden" value="0" id="h-product-Num">
+    <!--购物车-end-->
+    <input type="hidden" id="productid" value="425305">
+</div>
+        <div class="context">
+    <ul>
+     <li>{dede:prenext get='pre'/}</li>
+     <li>{dede:prenext get='next'/}</li>
+    </ul>
+   </div>
+
+
+
+                                <div class="clearfix">
+                                    <div class="share">
+                                        <div class="bdsharebuttonbox bdshare-button-style0-16" data-bd-bind="1470986273915"><a href="http://15266620375163com.fht360.com/product/425305.html#" class="bds_more" data-cmd="more">分享到：</a><a href="http://15266620375163com.fht360.com/product/425305.html#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a><a href="http://15266620375163com.fht360.com/product/425305.html#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a><a href="http://15266620375163com.fht360.com/product/425305.html#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博">腾讯微博</a><a href="http://15266620375163com.fht360.com/product/425305.html#" class="bds_renren" data-cmd="renren" title="分享到人人网">人人网</a><a href="http://15266620375163com.fht360.com/product/425305.html#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{"bdSize":16}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+                                    </div>					
+                                </div>
+                            </div>
+                     
+                         </div>
+               
+               
+               
+                
+                
+            </div>
+         </div>
+		
+    </div>
+
+ {dede:include filename="footer.htm"/}
+    
+
+</body></html>

@@ -1,0 +1,1 @@
+INSERT INTO `tybr_homepageset` VALUES('lingdian/index.htm','../index.html','1');
